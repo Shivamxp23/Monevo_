@@ -15,40 +15,33 @@
   ],
   "routes": [
     {
-      "src": "^/assets/(.*)",
-      "dest": "/public/assets/$1",
-      "headers": {
-        "Cache-Control": "public, max-age=31536000, immutable"
-      }
+      "src": "/register",
+      "dest": "/dist/index.html",
+      "continue": true
     },
     {
-      "src": "^/css/(.*)",
-      "dest": "/public/css/$1",
-      "headers": {
-        "Cache-Control": "public, max-age=31536000, immutable"
-      }
+      "src": "/auth",
+      "dest": "/dist/index.html",
+      "continue": true
     },
     {
-      "src": "^/register$|^/register/$",
-      "dest": "/dist/index.html"
+      "src": "/assets/(.*)",
+      "dest": "/public/assets/$1"
     },
     {
-      "src": "^/auth$|^/auth/$",
-      "dest": "/dist/index.html"
-    },
-    {
-      "src": "^/$",
-      "dest": "/public/index.html"
+      "src": "/css/(.*)",
+      "dest": "/public/css/$1"
     },
     {
       "src": "^/dist/(.*)",
       "dest": "/dist/$1"
     },
     {
-      "handle": "filesystem"
+      "src": "^/$",
+      "dest": "/public/index.html"
     },
     {
-      "src": "/(.*)",
+      "src": "/((?!dist/).*)",
       "dest": "/dist/index.html"
     }
   ]
