@@ -32,7 +32,7 @@
 								</svg></label></li>
 						<!--<li class="con"><a href="contact-link">Contact Us</a></li>-->
 						<li id="register" class="Outlined">
-							<a href="/register"><button>Register for free</button></a>
+							<button onclick="window.location.href='/register'">Register for free</button>
 						</li>
 					</ul>
 				</nav>
@@ -46,7 +46,7 @@
 			<p>We're here to help you make informed financial decisions, achieve long-term stability and
 			</p>
 			<span>take back control of your finances</span>
-			<button id="get-started" type="button">Get Started</button>
+			<button id="get-started" type="button" onclick="window.location.href='/register'">Get Started</button>
 		</section>
 		<section id="overview">
 			<div class="overview-card management">
@@ -67,7 +67,9 @@
 						entertainment, we cover all aspects of student life to help you make informed financial
 						decisions.</p>
 					<div class="visit">
-						<div class="visit-text"><a href ="/register">Get Started</a></div>
+						<div class="visit-text">
+							<button onclick="window.location.href='/register'">Get Started</button>
+						</div>
 						<div class="visit-arrow">
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
@@ -108,7 +110,9 @@
 					<p class="card-description">Your digital accountant is always at hand, wherever you are. Just
 						install the application on your phone to experience a new money management experience.</p>
 					<div class="visit">
-						<div class="visit-text"><a href ="/register">Get Started</a></div>
+						<div class="visit-text">
+							<button onclick="window.location.href='/register'">Get Started</button>
+						</div>
 						<div class="visit-arrow">
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
@@ -162,7 +166,9 @@
 					</ul>
 					</p>
 					<div class="visit">
-						<div class="visit-text"><a href ="/register">Get Started</a></div>
+						<div class="visit-text">
+							<button onclick="window.location.href='/register'">Get Started</button>
+						</div>
 						<div class="visit-arrow">
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
@@ -195,7 +201,9 @@
 						to address the unique financial challenges faced by students, ensuring they build a solid
 						foundation for both academic life and beyond.</p>
 					<div class="visit">
-						<div class="visit-text"><a href ="/register">Get Started</a></div>
+						<div class="visit-text">
+							<button onclick="window.location.href='/register'">Get Started</button>
+						</div>
 						<div class="visit-arrow">
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
@@ -246,7 +254,9 @@
 				<div class="desc">Empower your financial journey with smart tools, tailored support, and exclusive
 					resources to help you thrive today and beyond.</div>
 				<div class="visit">
-					<div class="visit-text"><a href ="/register">Get Started</a></div>
+					<div class="visit-text">
+						<button onclick="window.location.href='/register'">Get Started</button>
+					</div>
 					<div class="visit-arrow">
 						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M16.4 7L21.5 12L16.4 17" stroke="#67C9CB" stroke-width="2" stroke-linecap="round"
@@ -270,15 +280,6 @@
 		</div>
 		<p class="slogan">built by students, for students</p>
 	</footer>
-	<script>
-		// Add event listeners to buttons
-		document.getElementById('register').addEventListener('click', function() {
-		  window.location.href = '/register';
-		});
-		document.getElementById('get-started').addEventListener('click', function() {
-		  window.location.href = '/register';
-		});
-	</script>
 </body>
 
 </html>
