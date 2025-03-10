@@ -16,11 +16,17 @@
   "routes": [
     {
       "src": "^/assets/(.*)",
-      "dest": "/public/assets/$1"
+      "dest": "/public/assets/$1",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
     },
     {
       "src": "^/css/(.*)",
-      "dest": "/public/css/$1"
+      "dest": "/public/css/$1",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
     },
     {
       "src": "^/$",
@@ -28,19 +34,11 @@
     },
     {
       "src": "^/register/?$",
-      "dest": "/dist/index.html",
-      "headers": {
-        "Cache-Control": "no-cache, no-store, must-revalidate",
-        "X-Frame-Options": "DENY"
-      }
+      "dest": "/dist/index.html"
     },
     {
       "src": "^/auth/?$",
-      "dest": "/dist/index.html",
-      "headers": {
-        "Cache-Control": "no-cache, no-store, must-revalidate",
-        "X-Frame-Options": "DENY"
-      }
+      "dest": "/dist/index.html"
     },
     {
       "src": "^/dist/(.*)",
