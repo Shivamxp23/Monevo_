@@ -49,14 +49,7 @@ const App = () => (
               <Layout>
                 <Routes>
                   <Route path="/auth" element={<AuthForm />} />
-                  <Route
-                    path="/register"
-                    element={
-                      <ProtectedRoute>
-                        <Index />
-                      </ProtectedRoute>
-                    }
-                  />
+                  <Route path="/register" element={<Index />} />
                   <Route
                     path="/:courseId"
                     element={
