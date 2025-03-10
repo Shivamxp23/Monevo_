@@ -5,34 +5,31 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist"
+        "distDir": "dist",
+        "zeroConfig": true
       }
     }
   ],
   "routes": [
-    {
+    { 
       "src": "^/$",
-      "dest": "index.html"
+      "dest": "/index.html"
     },
     {
-      "src": "/assets/(.*)",
+      "src": "^/assets/(.*)",
       "dest": "/assets/$1"
     },
     {
-      "src": "/css/(.*)",
+      "src": "^/css/(.*)",
       "dest": "/css/$1"
     },
     {
-      "src": "^/register$",
-      "dest": "/dist/index.html"
+      "src": "^/(register|auth)$",
+      "dest": "/index.html"
     },
     {
-      "src": "^/auth$",
-      "dest": "/dist/index.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/dist/index.html"
+      "src": "^/(?!(assets|css)/)(.*)",
+      "dest": "/index.html"
     }
   ]
 }
