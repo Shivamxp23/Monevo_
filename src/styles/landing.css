@@ -1,0 +1,48 @@
+/* Landing page styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.nav-outbox {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  list-style: none;
+}
+
+#hero {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+#hero img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#get-started {
+  background-color: #67C9CB;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+/* Add the rest of your CSS styles from public/css/style.css */ 

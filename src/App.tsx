@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from "@/lib/auth";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ProtectedRoute } from "@/components/auth/ProtectedRoute";
@@ -13,6 +13,7 @@ import CourseContent from "./pages/CourseContent";
 import { AuthForm } from "./components/auth/AuthForm";
 import { StrictMode } from "react";
 import { LogOut } from "lucide-react";
+import Landing from './pages/Landing';
 
 const queryClient = new QueryClient();
 
@@ -42,12 +43,13 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 const App = () => (
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
+      <Router>
         <AuthProvider>
           <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
             <TooltipProvider>
               <Layout>
                 <Routes>
+                  <Route path="/" element={<Landing />} />
                   <Route path="/auth" element={<AuthForm />} />
                   <Route
                     path="/register"
@@ -81,7 +83,7 @@ const App = () => (
             </TooltipProvider>
           </ThemeProvider>
         </AuthProvider>
-      </BrowserRouter>
+      </Router>
     </QueryClientProvider>
   </StrictMode>
 );
