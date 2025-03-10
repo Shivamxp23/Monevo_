@@ -13,7 +13,6 @@ import CourseContent from "./pages/CourseContent";
 import { AuthForm } from "./components/auth/AuthForm";
 import { StrictMode } from "react";
 import { LogOut } from "lucide-react";
-import Landing from './pages/Landing';
 
 const queryClient = new QueryClient();
 
@@ -49,7 +48,6 @@ const App = () => (
             <TooltipProvider>
               <Layout>
                 <Routes>
-                  <Route path="/" element={<Landing />} />
                   <Route path="/auth" element={<AuthForm />} />
                   <Route
                     path="/register"
