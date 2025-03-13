@@ -23,12 +23,18 @@
       "dest": "/public/css/$1"
     },
     {
-      "src": "^/register/?$",
-      "dest": "/dist/index.html"
+      "src": "^/auth/?$",
+      "dest": "/dist/index.html",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, must-revalidate"
+      }
     },
     {
-      "src": "^/auth/?$",
-      "dest": "/dist/index.html"
+      "src": "^/register/?$",
+      "dest": "/dist/index.html",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, must-revalidate"
+      }
     },
     {
       "src": "^/$",
