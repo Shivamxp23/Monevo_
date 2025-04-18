@@ -2,10 +2,6 @@
   "version": 2,
   "builds": [
     {
-      "src": "public/**",
-      "use": "@vercel/static"
-    },
-    {
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
@@ -16,18 +12,18 @@
   "routes": [
     {
       "src": "^/$",
-      "dest": "/public/index.html"
+      "dest": "/index.html"
     },
     {
       "src": "^/auth/?$",
-      "dest": "/dist/index.html",
+      "dest": "/index.html",
       "headers": {
         "Cache-Control": "no-cache, no-store, must-revalidate"
       }
     },
     {
       "src": "^/register/?$",
-      "dest": "/dist/index.html",
+      "dest": "/index.html",
       "headers": {
         "Cache-Control": "no-cache, no-store, must-revalidate"
       }
@@ -37,7 +33,7 @@
     },
     {
       "src": "/.*",
-      "dest": "/dist/index.html"
+      "dest": "/index.html"
     }
   ],
   "framework": "vite",
