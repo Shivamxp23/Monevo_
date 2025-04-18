@@ -39,5 +39,8 @@
       "src": "/.*",
       "dest": "/dist/index.html"
     }
-  ]
+  ],
+  "framework": "vite",
+  "cleanUrls": true,
+  "trailingSlash": false
 }
