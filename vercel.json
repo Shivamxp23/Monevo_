@@ -1,42 +1,43 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
+    "version": 2,
+    "builds": [
+      {
+        "src": "public/**",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "dist"
+        }
       }
-    }
-  ],
-  "routes": [
-    {
-      "src": "^/$",
-      "dest": "/index.html"
-    },
-    {
-      "src": "^/auth/?$",
-      "dest": "/index.html",
-      "headers": {
-        "Cache-Control": "no-cache, no-store, must-revalidate"
+    ],
+    "routes": [
+      {
+        "src": "^/$",
+        "dest": "/public/index.html"
+      },
+      {
+        "src": "^/auth/?$",
+        "dest": "/dist/index.html",
+        "headers": {
+          "Cache-Control": "no-cache, no-store, must-revalidate"
+        }
+      },
+      {
+        "src": "^/register/?$",
+        "dest": "/dist/index.html",
+        "headers": {
+          "Cache-Control": "no-cache, no-store, must-revalidate"
+        }
+      },
+      {
+        "handle": "filesystem"
+      },
+      {
+        "src": "/.*",
+        "dest": "/dist/index.html"
       }
-    },
-    {
-      "src": "^/register/?$",
-      "dest": "/index.html",
-      "headers": {
-        "Cache-Control": "no-cache, no-store, must-revalidate"
-      }
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/.*",
-      "dest": "/index.html"
-    }
-  ],
-  "framework": "vite",
-  "cleanUrls": true,
-  "trailingSlash": false
-}
+    ]
+  }
